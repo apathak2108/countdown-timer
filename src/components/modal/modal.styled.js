@@ -11,12 +11,12 @@ export const ModalMainDiv = styled.div`
 `;
 
 export const ModalDiv = styled.div`
-    height: 390px;
-    width: 270px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+  height: 390px;
+  width: 270px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 `;

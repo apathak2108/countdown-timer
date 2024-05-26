@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { ModalMainDiv, ModalDiv, InputsDiv, StyledButton } from "./modal.styled";
+import React, { useState } from "react";
+import {
+  ModalMainDiv,
+  ModalDiv,
+  InputsDiv,
+  StyledButton,
+} from "./modal.styled";
 import InputField from "../InputField";
 import { setCountdownValues } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
+import TimerBox from "../TimerBox";
 
 const Modal = () => {
   const dispatch = useDispatch();
@@ -10,8 +16,6 @@ const Modal = () => {
   const [minutesValue, setMinutesValue] = useState(null);
   const [secondsValue, setSecondsValue] = useState(null);
 
-  const values = useSelector((state) => state?.countdown);
-  console.log(values, "values");
 
   const handleSetCountdown = () => {
     dispatch(setCountdownValues(hoursValue, minutesValue, secondsValue));

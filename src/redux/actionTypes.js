@@ -1,1 +1,2 @@
 export const SET_COUNTDOWN_VALUES = "SET_COUNTDOWN_VALUES";
+export const IS_MODAL_OPEN = "IS_MODAL_OPEN";

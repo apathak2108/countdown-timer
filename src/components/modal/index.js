@@ -8,14 +8,12 @@ import {
 import InputField from "../InputField";
 import { setCountdownValues } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
-import TimerBox from "../TimerBox";
 
 const Modal = () => {
   const dispatch = useDispatch();
   const [hoursValue, setHoursValue] = useState(null);
   const [minutesValue, setMinutesValue] = useState(null);
   const [secondsValue, setSecondsValue] = useState(null);
-
 
   const handleSetCountdown = () => {
     dispatch(setCountdownValues(hoursValue, minutesValue, secondsValue));

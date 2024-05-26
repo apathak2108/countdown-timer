@@ -1,8 +1,8 @@
 import React from "react";
-import Modal from "./components/modal";
+import Home from "./containers/Home";
 
 const App = () => {
-  return <Modal />;
+  return <Home />;
 };
 
 export default App;

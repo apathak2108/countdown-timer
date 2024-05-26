@@ -1,9 +1,9 @@
 import { SET_COUNTDOWN_VALUES } from "../actionTypes";
 
 const initialValue = {
-  hours: null,
-  minutes: null,
-  seconds: null,
+  hours: '00',
+  minutes: '00',
+  seconds: '00',
 };
 
 export const setCountdownValuesReducer = (state = initialValue, action) => {

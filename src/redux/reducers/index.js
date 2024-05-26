@@ -1,9 +1,10 @@
-import { SET_COUNTDOWN_VALUES } from "../actionTypes";
+import { IS_MODAL_OPEN, SET_COUNTDOWN_VALUES } from "../actionTypes";
 
 const initialValue = {
-  hours: '00',
-  minutes: '00',
-  seconds: '00',
+  hours: "00",
+  minutes: "00",
+  seconds: "00",
+  isModal: false,
 };
 
 export const setCountdownValuesReducer = (state = initialValue, action) => {
@@ -14,6 +15,11 @@ export const setCountdownValuesReducer = (state = initialValue, action) => {
         hours: action?.payloadHours,
         minutes: action?.payloadMinutes,
         seconds: action?.payloadSeconds,
+      };
+    case IS_MODAL_OPEN:
+      return {
+        ...state,
+        isModal: !state.isModal,
       };
     default:
       return state;

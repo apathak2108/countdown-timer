@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyledMainDiv,
   StyledTimerDiv,
@@ -13,9 +13,21 @@ import Modal from "../../components/modal";
 const Home = () => {
   const dispatch = useDispatch();
   const values = useSelector((state) => state?.countdown);
+  const totalSeconds =
+    values.hours * 3600 + values.minutes * 60 + values.seconds;
   const [hours, setHours] = useState(values?.hours);
   const [minutes, setMinutes] = useState(values?.minutes);
   const [seconds, setSeconds] = useState(values?.seconds);
+  const [isRunning, setIsRunning] = useState(false);
+
+
+  useEffect(() => {
+    
+    let countdown;
+    if (isRunning) {
+      countdown = setInterval(() => {});
+    }
+  });
 
   return (
     <>
@@ -29,7 +41,9 @@ const Home = () => {
             <TimerBox value={seconds} />
           </StyledTimerDiv>
           <StyledButtonsDiv>
-            <StyledButton>START</StyledButton>
+            <StyledButton onClick={() => setIsRunning(true)}>
+              START
+            </StyledButton>
             <StyledButton
               style={{ backgroundColor: "#47478d" }}
               onClick={() => dispatch(isModalOpen())}

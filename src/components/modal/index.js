@@ -6,17 +6,18 @@ import {
   StyledButton,
 } from "./modal.styled";
 import InputField from "../InputField";
-import { setCountdownValues } from "../../redux/actions";
+import { isModalOpen, setCountdownValues } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 
 const Modal = () => {
   const dispatch = useDispatch();
-  const [hoursValue, setHoursValue] = useState(null);
-  const [minutesValue, setMinutesValue] = useState(null);
-  const [secondsValue, setSecondsValue] = useState(null);
+  const [hoursValue, setHoursValue] = useState("");
+  const [minutesValue, setMinutesValue] = useState("");
+  const [secondsValue, setSecondsValue] = useState("");
 
   const handleSetCountdown = () => {
     dispatch(setCountdownValues(hoursValue, minutesValue, secondsValue));
+    dispatch(isModalOpen());
   };
 
   return (

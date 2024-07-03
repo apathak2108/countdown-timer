@@ -11,6 +11,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Modal = () => {
   const dispatch = useDispatch();
+  const values = useSelector((state) => state?.countdown);
+console.log(values, 'values')
+
   const [hoursValue, setHoursValue] = useState("");
   const [minutesValue, setMinutesValue] = useState("");
   const [secondsValue, setSecondsValue] = useState("");

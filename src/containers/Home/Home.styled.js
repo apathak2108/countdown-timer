@@ -17,8 +17,9 @@ export const StyledTimerDiv = styled.div`
 
 export const StyledButtonsDiv = styled.div`
   display: flex;
-  width: 347px;
   justify-content: space-between;
+  flex-flow: column;
+  gap: 12px;
 `;
 
 export const StyledButton = styled.button`
